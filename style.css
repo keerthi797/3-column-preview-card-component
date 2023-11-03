@@ -1,11 +1,13 @@
-.container{
-    display: flex;  
+.container{      
+    display: flex; 
     justify-content:center;
-    align-items: center;
-    flex-direction: row; 
-    margin-top: 120px;
-    
+    align-items: center;  
+    min-height: 100vh;
+} 
+main{
+    display: flex;
 }
+
 .sedans{
     background-color: hsl(31, 77%, 52%);
     border-radius: 8px 0px 0px 8px;
@@ -25,6 +27,7 @@ h1{
     text-transform: uppercase;   
 }
 .sedans,.suv,.luxury{
+   
     height: 380px;
     width: 200px;
     padding: 30px;    
@@ -63,22 +66,21 @@ p{
 .luxury button{
     color: hsl(179, 100%, 13%);
 }
-@media screen and (max-width:375px){
-    .container{
+@media (min-width:360px) and (max-width:720px){
+    main{
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
     }
     .sedans{      
         border-radius: 5px 5px 0px 0px;
+      
     }
     .luxury{      
         border-radius: 0px 0px 5px 5px;
     }
     .sedans,.suv,.luxury{
         height: 270px;
-        width: 150px; 
-         
+        width: 150px;          
         font-size: 10px;      
     }
     h1{
